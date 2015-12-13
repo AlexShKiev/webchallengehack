@@ -1,0 +1,24 @@
+.ask-block {
+  position: relative;
+
+  margin-bottom: 90px;
+  padding: 90px 0;
+
+  text-align: center;
+  background: url("../../src/images/ask-block__bg.png") top center no-repeat;
+  background-size: cover;
+  box-shadow: 2px 2px 9px -1px rgba(0,0,0,0.18);
+
+  &__title {
+    font-family: $font-custom-bold;
+    font-size: 55px;
+    color: #646464;
+    padding-bottom: 90px;
+  }
+  &__btn-wrap {
+    position: absolute;
+    right: 5%;
+    bottom: 100%;
+    margin-bottom: - 28px; //Button height
+  }
+}

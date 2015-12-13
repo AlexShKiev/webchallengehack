@@ -1,0 +1,139 @@
+.form {
+    width: 90%;
+    margin: 0 auto;
+    padding: 60px;
+
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 2px 2px 9px -1px rgba(0,0,0,0.18);;
+
+
+    &-wrap {
+        padding: 90px 0;
+
+        background: url("../../src/images/form__bg.png") top center no-repeat;
+        background-size: cover;
+    }
+
+    &__title {
+        font-family: $font-custom-bold;
+        font-size: 55px;
+        color: #fff;
+        padding-bottom: 90px;
+        opacity: 0.8;
+        text-align: center;
+    }
+
+    &__row {
+        position: relative;
+
+        text-align: left;
+        width: 100%;
+        margin-bottom: 40px;
+
+        @include clearfix();
+    }
+    &__col {
+        float: left;
+
+        &--full-width {
+            width: 100%;
+        }
+        &--50 {
+            width: 47%;
+            margin-right: 6%;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+        }
+    }
+    &__label {
+        line-height: 2;
+
+        font-size: 17px;
+        color: #9e9e9e;
+
+    }
+
+    &__input {
+        width: 100%;
+
+        padding: 5px 0;
+
+        font-family: $font-normal;
+        font-size: 22px;
+
+        color: $grey_absolute;
+        background: transparent;
+        border-bottom: 3px solid rgba(6, 102, 65, 0.8);
+
+        @extend %transitionSlow;
+
+        &:focus {
+            border-bottom-color: #066641;
+        }
+
+    }
+    &__clone-tpl {
+        display: block;
+        margin-bottom: 40px;
+        text-align: left;
+        text-decoration: none;
+        color: $grey_absolute;
+        font-size: 35px;
+
+
+        &:hover {
+            opacity: 0.7;
+            @extend %transition;
+        }
+
+        &:before {
+            content: '+';
+            display: inline-block;
+            vertical-align: text-top;
+            margin-right: 10px;
+            font-size: 45px;
+
+            color: #066641;
+        }
+
+    }
+
+}
+
+@include media-breakpoint('phone') {
+    .form {
+        width: 100%;
+        padding: 20px;
+
+        &__label-col {
+            width: 100%;
+            text-align: left;
+        }
+        &__content-col {
+            width: 100%;
+        }
+        &__label,
+        &__input{
+            font-size: 19px;
+        }
+        &__input--short {
+            width: 100%;
+        }
+        &__file {
+            display: block;
+            padding-top: 10px;
+            margin: 0;
+        }
+        &__file-wrap {
+
+            .form__input {
+
+                padding: 10px 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.btn-share {
+  position: relative;
+
+  border-radius: 50%;
+
+
+  height: 56px;
+  width: 56px;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+  background-color: #066641;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.12),0 1px 2px 0 rgba(0,0,0,.24);
+  line-height: normal;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:before {
+    top: 50%;
+    left: 50%;
+
+    margin-top: -7px; // Icon height
+    margin-left: -7px; //Icon width
+
+    width: 14px;
+    height: 14px;
+
+    background: url("../../src/images/btn-share_icon.png") no-repeat;
+    background-size: contain;
+    @include after;
+    
+  }
+}

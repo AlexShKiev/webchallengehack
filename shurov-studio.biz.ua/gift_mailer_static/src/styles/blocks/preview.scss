@@ -1,0 +1,62 @@
+.preview {
+  margin-bottom: 50px;
+
+  text-align: center;
+  line-height: 1.4;
+
+  @include clearfix;
+
+  &__title {
+
+    font-family: $font-custom-bold;
+    font-size: 40px;
+
+    text-transform: uppercase;
+
+    color: $grey_absolute;
+  }
+
+  &__step-wrap {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    text-align: center;
+
+    &:nth-child(odd) {
+      margin-top: 200px;
+    }
+  }
+
+  &__step {
+    margin: 10px auto;
+    width: 450px;
+
+  }
+  &__img {
+    margin: 15px 0;
+  }
+
+  &__sub-title {
+    font-size: 30px;
+    font-family: $font-custom-regular;
+    color: $grey_absolute;
+  }
+  &__text {
+    font-size: 25px;
+    text-align: left;
+  }
+}
+
+@include media-breakpoint('phone') {
+  .preview {
+
+    &__step-wrap {
+      width: 100%;
+      margin: 30px 0;
+
+      &:nth-child(odd) {
+        margin-top: 0;
+      }
+    }
+  }
+}

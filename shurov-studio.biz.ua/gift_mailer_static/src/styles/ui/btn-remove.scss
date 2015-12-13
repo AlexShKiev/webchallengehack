@@ -1,0 +1,20 @@
+.btn-remove {
+  position: absolute;
+  left: 102%;
+  top: 35%;
+
+  cursor: pointer;
+
+  transform: rotate(45deg);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:before {
+    content: '+';
+    font-size: 30px;
+    color: #066641;
+
+  }
+}
